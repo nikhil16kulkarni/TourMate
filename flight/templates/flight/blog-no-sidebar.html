@@ -1,0 +1,486 @@
+<!doctype html>
+<html class="no-js" lang="zxx">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title> Tour Mate | Search </title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Favicon -->
+    <link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon.png">
+    
+    <!-- CSS
+	============================================ -->
+   
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="static/assets/css/bootstrap.min.css">
+    <!-- Icon Font CSS -->
+    <link rel="stylesheet" href="static/assets/css/icons.min.css">
+    <!-- Plugins CSS -->
+    <link rel="stylesheet" href="static/assets/css/plugins.css">
+    <!-- Main Style CSS -->
+    <link rel="stylesheet" href="static/assets/css/style.css">
+    <!-- search and autocomplete CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+
+    <!-- Google APIs -->
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDbCg6GRKc20V6mZBJIJMF-QpdiguRrHxw&libraries=places"></script>
+    
+
+</head>
+
+<body>
+<header class="header-area header-padding-1 sticky-bar header-res-padding clearfix ">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xl-2 col-lg-2 col-md-6 col-4">
+                <div class="logo">
+                    <a href="index">
+                        <img alt="" src="static/assets/img/logo/logo.jpg" alt width="120" height="55">
+                    </a>
+                </div>
+            </div>
+            <div class="col-xl-8 col-lg-8 d-none d-lg-block">
+                <div class="main-menu">
+                    <nav>
+                        <ul>
+                            <li><a href="index">Home </a>
+                                
+                            <!-- <li><a href="shop-grid-fw.php"> Shop </a></li> -->
+                                
+                            <!-- <li><a href="shop-grid-fw.php">Collection</a></li> -->
+                           
+                            <li><a href="blog-no-sidebar">Search </a></li>
+                                
+                            
+                            <li><a href="about-us"> About </a></li>
+                            <li><a href="contact"> Contact</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+            <div class="col-xl-2 col-lg-2 col-md-6 col-8">
+                   <div class="header-right-wrap">
+                    <div class="same-style header-search">
+                        <a class="search-active" href="#"><i class="pe-7s-search"></i></a>
+                        <div class="search-content">
+                            <form action="#">
+                                <input type="text" placeholder="Search" />
+                                <button class="button-search"><i class="pe-7s-search"></i></button>
+                            </form>
+                        </div> 
+                    </div>
+                    <div class="same-style account-satting">
+                        <a class="account-satting-active" href="#"><i class="pe-7s-users"></i></a>
+                        <div class="account-dropdown">
+                            <ul>
+                                <li><a href="login_page">Login</a></li>
+                                <li><a href="login_page">Register</a></li>
+                                
+                                
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- <div class="same-style header-wishlist">
+                        <a href="#"><i class="pe-7s-like"></i></a>
+                    </div> -->
+                    <!-- <div class="same-style cart-wrap">
+                        <button class="icon-cart">
+                            <i class="pe-7s-shopbag"></i>
+                                span class="count-style">02</span>
+                        </button>
+                        <div class="shopping-cart-content">
+                            <div class="shopping-cart-btn btn-hover text-center">
+                                <a class="default-btn" href="cart-page.php">view cart</a>
+                                
+                            </div>
+                        </div>
+                    </div> -->
+                </div>
+            </div>
+        </div>
+        <div class="mobile-menu-area">
+            <div class="mobile-menu">
+                <nav id="mobile-menu-active">
+                    <ul class="menu-overflow">
+                        <li><a href="index.html">HOME</a>
+                            
+                                </li>
+                                
+                                
+                            </ul>
+                        </li>
+                        <li><a href="shop-grid-fw.html">Shop</a>
+                            
+                                </li>
+                                
+                            </ul>
+                        </li>
+                        <li><a href="shop.html">Collection</a></li>
+                       
+                        <li><a href="l">Blog</a>
+                            
+                        </li>
+                        <li><a href="about.html">About us</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </div>
+</header>
+<div class="breadcrumb-area pt-35 pb-35 bg-purple">
+    <div class="container">
+        <div class="breadcrumb-content text-center">
+            <ul>
+                <li>
+                    <a href="index.html">Home</a>
+                </li>
+                <li class="active">Search Places </li>
+            </ul>
+        </div>
+    </div>
+</div>
+<div class="Blog-area pt-100 pb-100 blog-no-sidebar">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+
+                <!-- Search and Autocomplete -->
+                <div class="card mb-3">
+                    <div class="card-header">
+                        <h5>Search Places</h5>
+                    </div>
+                    <div class="card-body">
+                        <form>
+                            <div class="input-group">
+                                <input type="text" class="form-control" id="searchPlaces" placeholder="Search for places" height: 38px;>
+                                
+                                <div class="input-group-append">
+                                    
+                                    <button class="btn btn-outline-secondary" type="submit" style="height: 38px;">
+                                        <i class="fas fa-search"></i>     
+                                    </button>
+                                </div>
+                                
+                            </div>
+                        </form>
+                    </div>
+                    
+                </div>
+
+
+                <div class="container mt-5">
+    <!-- Accommodation Search and Filter -->
+
+    <div class="card mb-3 animate__animated animate__fadeIn">
+        <div class="card-header">
+            <h5>Search Accommodation</h5>
+        </div>
+        <div class="card-body">
+            <form>
+                <div class="input-group mb-3">
+                    <input type="text" class="form-control" id="searchAccommodation" placeholder="Search for accommodation" style="height: 38px;">
+                    <div class="input-group-append">
+                        <button class="btn btn-outline-secondary" type="submit" style="height: 38px;">
+                            <i class="fas fa-search"></i>
+                        </button>
+                    </div>
+                </div>
+            </form>
+            <form>
+                <div class="form-group mb-3">
+                    <label for="priceRange">Price Range:</label>
+                    <select class="form-control" id="priceRange">
+                        <option>0-50</option>
+                        <option>50-100</option>
+                        <option>100-200</option>
+                        <option>200+</option>
+                    </select>
+                </div>
+                <div class="form-group mb-3">
+                    <label for="accommodationType">Accommodation Type:</label>
+                    <select class="form-control" id="accommodationType">
+                        <option>Hotel</option>
+                        <option>Hostel</option>
+                        <option>Airbnb</option>
+                    </select>
+                </div>
+                <div class="form-group mb-3">
+                    <label for="reviewRating">Review Rating:</label>
+                    <select class="form-control" id="reviewRating">
+                        <option>1 star</option>
+                        <option>2 stars</option>
+                        <option>3 stars</option>
+                        <option>4 stars</option>
+                        <option>5 stars</option>
+                    </select>
+                </div>
+                <button type="submit" class="btn btn-primary">Apply Filters</button>
+            </form>
+        </div>
+    </div>
+
+
+                
+
+            <!-- tabs -->
+
+            <div class="container mt-5">
+                <div class="card">
+                    <div class="card-header">
+                        <ul class="nav nav-tabs card-header-tabs" id="myTab" role="tablist">
+                            <li class="nav-item" role="presentation">
+                                <a class="nav-link active" id="accommodation-tab" data-bs-toggle="tab" href="#accommodation" role="tab" aria-controls="accommodation" aria-selected="true">Accommodation</a>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                                <a class="nav-link" id="travel-mode-tab" data-bs-toggle="tab" href="#travel-mode" role="tab" aria-controls="travel-mode" aria-selected="false">Travel Mode</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="card-body">
+                        <div class="tab-content" id="myTabContent">
+                            <div class="tab-pane fade show active" id="accommodation" role="tabpanel" aria-labelledby="accommodation-tab">
+                                <!-- Accommodation Mode Results -->
+                                <!-- Add your Accommodation HTML here -->
+                                <div class="card mb-3">
+                <div class="card-header">
+                    <h5>Accommodation Results</h5>
+                </div>
+                <div class="card-body">
+                    <div class="row">
+    
+    <div class="col-lg-4 col-md-6 col-sm-12">
+        <div class="card mb-3">
+            <div class="accommodation-img">
+                <a href="#"><img src="static/assets/img/accommodation/hostel-1.jpg" class="card-img-top" alt=""></a>
+            </div>
+            <div class="card-body">
+                <h4 class="card-title"><a href="#">Backpackers Hostel</a></h4>
+                <ul class="list-unstyled">
+                    <li><i class="fa fa-star"></i> 3.5</li>
+                    <li><i class="fa fa-map-marker"></i> San Francisco</li>
+                    <li><i class="fa fa-money"></i> $25/night</li>
+                </ul>
+                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean sit amet odio a mauris sagittis semper sed ac eros. Praesent quis arcu et purus.</p>
+            </div>
+        </div>
+    </div>
+    <div class="col-lg-4 col-md-6 col-sm-12">
+        <div class="card mb-3">
+            <div class="accommodation-img">
+                <a href="#"><img src="assets/img/accommodation/airbnb-1.jpg" class="card-img-top" alt=""></a>
+            </div>
+            <div class="card-body">
+                <h4 class="card-title"><a href="#">Airbnb Room</a></h4>
+                <ul class="list-unstyled">
+                    <li><i class="fa fa-star"></i> 4.0</li>
+                    <li><i class="fa fa-map-marker"></i> London</li>
+                    <li><i class="fa fa-money"></i> $50/night</li>
+                </ul>
+                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean sit amet odio a mauris sagittis semper sed ac eros. Praesent quis arcu et purus.</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+                </div>
+            </div>
+                            </div>
+                            <div class="tab-pane fade" id="travel-mode" role="tabpanel" aria-labelledby="travel-mode-tab">
+                                <!-- Travel Mode Results -->
+                                <!-- Add your Travel Mode HTML here -->
+                                <!-- Travel Mode Results -->
+            <div class="card mb-3">
+                <div class="card-header">
+                    <h5>Travel Mode Results</h5>
+                </div>
+                <div class="card-body">
+                    <div class="row">
+                        
+                        <div class="col-lg-4 col-md-6 col-sm-12">
+                            <div class="travel-mode-wrap mb-30">
+                                <div class="travel-mode-img">
+                                    <a href="#"><img src="assets/img/travel-mode/bus.jpg" alt=""></a>
+                                </div>
+                                <div class="travel-mode-content">
+                                    <h4><a href="#">Bus</a></h4>
+                                    <ul>
+                                        <li><i class="fa fa-map-marker"></i> New York - San Francisco</li>
+                                        <li><i class="fa fa-money"></i> $50</li>
+                                    </ul>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean sit amet odio a mauris sagittis semper sed ac eros. Praesent quis arcu et purus.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6 col-sm-12">
+                            <div class="travel-mode-wrap mb-30">
+                                <div class="travel-mode-img">
+                                    <a href="#"><img src="assets/img/travel-mode/train.jpg" alt=""></a>
+                                </div>
+                                <div class="travel-mode-content">
+                                    <h4><a href="#">Train</a></h4>
+                                    <ul>
+                                        <li><i class="fa fa-map-marker"></i> New York - San Francisco</li>
+                                        <li><i class="fa fa-money"></i> $100</li>
+                                    </ul>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean sit amet odio a mauris sagittis semper sed ac eros. Praesent quis arcu et purus.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+            
+            <div class="pro-pagination-style text-center mt-20">
+                <ul>
+                    <li><a class="prev" href="#"><i class ="fa fa-angle-double-left"></i></a></li>
+<li><a class="active" href="#">1</a></li>
+<li><a href="#">2</a></li>
+<li><a href="#">3</a></li>
+<li><a class="next" href="#"><i class="fa fa-angle-double-right"></i></a></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>               
+                
+            </div>
+        </div>
+    </div>
+</div>
+<footer class="footer-area bg-purple pt-100 pb-70">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-2 col-md-4 col-sm-4">
+                <div class="copyright mb-30">
+                    <div class="footer-logo">
+                        <a href="index">
+                            <img alt="" src="static/assets/img/logo/logo.jpg" alt width="120" height="55">
+                        </a>
+                    </div>
+                    <p>© 2023 <a href="#">Tour Mate</a>.<br> All Rights Reserved</p>
+                </div>
+            </div>
+            <div class="col-lg-2 col-md-4 col-sm-4">
+                <div class="footer-widget mb-30 ml-30">
+                    <div class="footer-title">
+                        <h3>ABOUT US</h3>
+                    </div>
+                    <div class="footer-list">
+                        <ul>
+                            <li><a href="about-us">About us</a></li>
+                            <li><a href="contact">Store location</a></li>
+                            <li><a href="contact">Contact</a></li>
+                            
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-2 col-md-4 col-sm-4">
+                <div class="footer-widget mb-30 ml-50">
+                    <div class="footer-title">
+                        <h3>USEFUL LINKS</h3>
+                    </div>
+                    <div class="footer-list">
+                        <ul>
+                            
+                            <li><a href="about-us">Support Policy</a></li>
+                            
+                            <li><a href="about-us">FAQs</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-2 col-md-6 col-sm-6">
+                <div class="footer-widget mb-30 ml-75">
+                    <div class="footer-title">
+                        <h3>FOLLOW US</h3>
+                    </div>
+                    <div class="footer-list">
+                        <ul>
+                            <li><a href="#">Facebook</a></li>
+                            <li><a href="#">Twitter</a></li>
+                            <li><a href="#">Instagram</a></li>
+                            <li><a href="#">Youtube</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 col-sm-6">
+                <div class="footer-widget mb-30 ml-70">
+                    <div class="footer-title">
+                        <h3>SUBSCRIBE</h3>
+                    </div>
+                    <div class="subscribe-style">
+                        <p>Get E-mail updates about our latest shop and special offers.</p>
+                        <div id="mc_embed_signup" class="subscribe-form">
+                            <form action="subscribe.html" method="get" target="_blank">
+                                <div id="mc_embed_signup_scroll" class="mc-form">
+                                    <input class="email" type="email" required="" placeholder="Enter your email here.." name="EMAIL" value="">
+                                    <div class="mc-news" aria-hidden="true">
+                                        <input type="text" value="" tabindex="-1" name="b_6bbb9b6f5827bd842d9640c82_05d85f18ef">
+                                    </div>
+                                    <div class="clear">
+                                        <input id="mc-embedded-subscribe" class="button" type="submit" name="subscribe" value="subscribe" >
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+
+
+
+<!-- All JS is here
+============================================ -->
+
+<script src="static/assets/js/vendor/modernizr-3.11.7.min.js"></script>
+<script src="static/assets/js/vendor/jquery-v3.6.0.min.js"></script>
+<script src="static/assets/js/vendor/jquery-migrate-v3.3.2.min.js"></script>
+<script src="static/assets/js/vendor/popper.min.js"></script>
+<script src="static/assets/js/vendor/bootstrap.min.js"></script>
+<script src="static/assets/js/plugins.js"></script>
+<!-- Ajax Mail -->
+<script src="static/assets/js/ajax-mail.js"></script>
+<!-- Main JS -->
+<script src="static/assets/js/main.js"></script>
+<!-- Search and Autocomplete -->
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+<!-- <script src="assets/js/search-autocomplete.js"></script> -->
+<script>
+    var input = document.getElementById('searchPlaces');
+    var autocomplete = new google.maps.places.Autocomplete(input);
+    autocomplete.addListener('place_changed', function() {
+      var place = autocomplete.getPlace();
+      // Do something with the selected place, e.g. show its details or location on a map
+    });
+  </script>
+<!-- explore -->
+<script src="assets/js/explore.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
+
+
+</body>
+
+</html>
