@@ -17,7 +17,7 @@ Deployment: Render, Bit.io </br>
 ## Getting Started
 To start planning your dream tour with TourMate, follow these steps:
 
-1. Clone the repository: git clone https://github.com/your-username/TourMate.git</br>
+1. Clone the repository: git clone https://github.com/nikhil16kulkarni/TourMate.git</br>
 2. Install necessary packages for frontend and backend.</br>
 3. For Frontend: Download the latest version of Bootstrap and set up React.js.</br>
 4. For Backend: Install Node.js, Python, and Django. </br>
