@@ -30,9 +30,6 @@ We welcome contributions from the community! If you would like to contribute to 
 3. Commit your changes and push to your fork
 4. Create a pull request for review
 
-## License
-
-This project is licensed under the MIT License. Feel free to use and modify the code for your own purposes.
 
 ## Contact
 
